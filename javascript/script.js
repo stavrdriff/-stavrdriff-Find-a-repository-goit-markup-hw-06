@@ -1,8 +1,36 @@
 document.addEventListener('DOMContentLoaded', () => {
+
+  const selectors = {
+    openSelector: 'is-open',
+    bodyBlocked: 'is-blocked',
+    modal: 'modal',
+    modalTrigger: '[data-action="modalTrigger"]',
+    interactiveElements: 'input, button, a, textarea, iframe',
+    mobileMenu: 'js-mobile-menu',
+    mobileMenuTrigger: '[data-action="mobileMenuTrigger"]',
+  }
+
+  function initMobileMenu() {
+    const mobileMenu = document.querySelector(`.${selectors.mobileMenu}`);
+    const triggerArr = [...document.querySelectorAll(selectors.mobileMenuTrigger)];
+    const body = document.querySelector('body');
+
+    if (!mobileMenu || !triggerArr.length) { 
+      return;
+    }
+
+    triggerArr.forEach((trigger) => {
+      trigger.addEventListener('click', () => {
+        mobileMenu.classList.toggle(selectors.openSelector);
+        body.classList.toggle(selectors.bodyBlocked);
+
+        initModals(selectors.openSelector, selectors.mobileMenu);
+      })
+    })
+  }
   
   function initModalTriggers() {
-    const buttonsArr = [...document.querySelectorAll('[data-action="modalTrigger"]')];
-    const modalActiveSelector = 'is-open';
+    const buttonsArr = [...document.querySelectorAll(selectors.modalTrigger)];
 
     if (!buttonsArr.length) {
       return;
@@ -10,14 +38,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     buttonsArr.forEach((button, index) => {
       button.addEventListener('click', () => {
-        modalHandler(button, index, modalActiveSelector);
-        initModals(modalActiveSelector);
+        modalHandler(button, index, selectors.openSelector);
+        initModals(selectors.openSelector, selectors.modal);
       })
     })
   }
 
   function modalHandler(trigger, index, modalActiveSelector) {
-    const modals = [...document.querySelectorAll('.modal')];
+    const modals = [...document.querySelectorAll(`.${selectors.modal}`)];
 
     if (!modals.length) { 
       return;
@@ -25,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const body = document.querySelector('body');
 
-    body.classList.toggle('is-blocked')
+    body.classList.toggle(selectors.bodyBlocked);
     
     modals.forEach((modal, i) => {
       modal.classList.remove(modalActiveSelector);
@@ -36,25 +64,26 @@ document.addEventListener('DOMContentLoaded', () => {
     })
   }
 
-  function initModals(modalActiveSelector) {
-    const modals = [...document.querySelectorAll('.modal')];
+  function initModals(modalActiveSelector, modalSelector) {
+    const modals = [...document.querySelectorAll(`.${modalSelector}`)];
 
     if (!modals.length) { 
       return;
     }
 
     modals.forEach((modal) => {
-      const interactiveElements = [...modal.querySelectorAll('input, button, a')];
-      const allInteractiveElements = [...document.querySelectorAll('input, button, a')];
+      const interactiveElements = [...modal.querySelectorAll(selectors.interactiveElements)];
+      const allInteractiveElements = [...document.querySelectorAll(selectors.interactiveElements)];
       let pageInteractiveElements = [];
 
       allInteractiveElements.forEach((el) => {
-        if (!el.closest('.modal')) { 
+        if (!el.closest(`.${modalSelector}`)) { 
           pageInteractiveElements.push(el);
+          console.log(pageInteractiveElements)
         }
       })
 
-      tabindexHandler(interactiveElements, modalActiveSelector,pageInteractiveElements)    
+      tabindexHandler(interactiveElements, modalActiveSelector, pageInteractiveElements)    
     })
   }
 
@@ -74,11 +103,8 @@ document.addEventListener('DOMContentLoaded', () => {
         })
       }
     })
-
-
   }
 
-
+  initMobileMenu();
   initModalTriggers();
-  initModals();
 });

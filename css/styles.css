@@ -173,6 +173,7 @@ h3 {
   position: fixed;
   top: 0;
   right: 0;
+  z-index: 100;
   visibility: hidden;
   opacity: 0;
   padding: 4.5rem 1.5rem 2.5rem 1rem;
@@ -180,8 +181,11 @@ h3 {
   flex-direction: column;
   gap: 48px;
   min-height: 100vh;
+  max-height: 100vh;
+  overflow-y: auto;
   flex-grow: 1;
   background-color: #fff;
+  box-shadow: 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header__mobile-wrapper.is-open {
@@ -199,7 +203,12 @@ h3 {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    box-shadow: none;
+    overflow-y: unset;
   }
+}
+.header__close-button {
+  position: fixed !important;
 }
 @media (min-width: 768px) {
   .header__close-button {
@@ -242,10 +251,10 @@ h3 {
 .header__burger span:first-child, .header__burger span:last-child {
   margin: 0 0 0 auto;
 }
-.header__burger:focus, .header__burger:hover {
+.header__burger:hover {
   opacity: 0.75;
 }
-.header__burger:focus span, .header__burger:hover span {
+.header__burger:hover span {
   width: 70%;
 }
 
