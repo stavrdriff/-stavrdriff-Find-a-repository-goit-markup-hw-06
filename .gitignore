@@ -1,4 +1,4 @@
 # ignore files
-scss/
-.vscode/
-css/*.*.map
+# scss/
+# .vscode/
+# css/*.*.map

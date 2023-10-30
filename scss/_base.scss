@@ -1,0 +1,80 @@
+:root {
+  --color-cloud: #F4F4FD;
+  --rocket-socials-icon-color: #f4f4fd;
+  --primary-text-color: #434455;
+  --primary-font-family: 'Roboto', sans-serif;
+  --body-background-color: #fff;
+
+  --container-padding: 15px;
+  --container-padding-tiny-tablet: 108px;
+  --container-padding-tiny-mobile: 28px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-weight: 400;
+  font-size: inherit;
+  line-height: 1.5;
+  font-family: var(--primary-font-family);
+  color: var(--primary-text-color);
+  background-color: var(--body-background-color);
+  letter-spacing: .02em;
+  overflow-x: hidden;
+
+  &.is-blocked {
+    overflow: hidden;
+  }
+}
+
+main {
+  flex-grow: 1;
+}
+
+picture {
+  display: block;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  @include transition(color);
+
+  text-decoration: none;
+  color: #434455;
+
+  @include event {
+    color: #404BBF;
+  }
+}
+
+button {
+  cursor: pointer;
+}
+
+address {
+  font-style: normal;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}

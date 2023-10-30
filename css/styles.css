@@ -5,7 +5,8 @@
   --primary-font-family: "Roboto", sans-serif;
   --body-background-color: #fff;
   --container-padding: 15px;
-  --container-padding-tiny: 108px;
+  --container-padding-tiny-tablet: 108px;
+  --container-padding-tiny-mobile: 28px;
 }
 
 * {
@@ -100,18 +101,22 @@ h3 {
 }
 
 .container {
-  max-width: calc(70.5rem + var(--container-padding) * 2);
-  padding: 0 var(--container-padding);
+  --ui-container-padding: var(--container-padding);
+  max-width: calc(70.5rem + var(--ui-container-padding) * 2);
+  padding: 0 var(--ui-container-padding);
   margin: 0 auto;
 }
+.container--tiny {
+  --ui-container-padding: var(--container-padding-tiny-mobile);
+}
 @media (min-width: 768px) {
-  .container--tiny-tablet {
-    padding: 0 var(--container-padding-tiny);
+  .container--tiny {
+    --ui-container-padding: var(--container-padding-tiny-tablet);
   }
 }
 @media (min-width: 1280px) {
-  .container--tiny-tablet {
-    padding: 0 var(--container-padding);
+  .container--tiny {
+    --ui-container-padding: var(--container-padding);
   }
 }
 

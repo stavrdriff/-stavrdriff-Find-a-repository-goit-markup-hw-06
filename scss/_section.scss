@@ -1,0 +1,16 @@
+.section {
+  padding: 96px 0;
+
+  @media (min-width: 768px) {
+    padding: 120px 0;
+  }
+
+  &__title {
+    margin-bottom: 72px;
+    text-align: center;
+  }
+
+  &--background {
+    background-color: #F4F4FD;
+  }
+}

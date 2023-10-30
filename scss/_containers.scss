@@ -1,0 +1,19 @@
+.container {
+  --ui-container-padding: var(--container-padding);
+
+  max-width: calc(70.5rem + var(--ui-container-padding) * 2);
+  padding: 0 var(--ui-container-padding); 
+  margin: 0 auto; 
+
+  &--tiny {
+    --ui-container-padding: var(--container-padding-tiny-mobile);
+
+    @include media(768) {
+      --ui-container-padding: var(--container-padding-tiny-tablet);
+    }
+
+    @include media(1280) {
+      --ui-container-padding: var(--container-padding);
+    }
+  }
+}
