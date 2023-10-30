@@ -79,7 +79,6 @@ document.addEventListener('DOMContentLoaded', () => {
       allInteractiveElements.forEach((el) => {
         if (!el.closest(`.${modalSelector}`)) { 
           pageInteractiveElements.push(el);
-          console.log(pageInteractiveElements)
         }
       })
 

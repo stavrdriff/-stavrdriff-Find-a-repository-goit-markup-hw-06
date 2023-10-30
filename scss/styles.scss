@@ -236,7 +236,7 @@
       font-weight: 400;
     }
 
-    @include media(1280) {
+    @include media(1158) {
       flex-direction: row;
       gap: 2.5rem;
       font-size: 1rem;
@@ -260,6 +260,8 @@
   max-width: 1440px;
   margin: 0 auto;
   padding: 72px 0;
+  background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), var(--hero-background-image);
+  // змінна винесена в head, буду вдячний, якщо розкажете, як можна ще вибирати тип файлу webp/jpg
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -268,7 +270,7 @@
       padding: 112px 0;
     }
 
-    @include media(1280) {
+    @include media(1158) {
       padding: 188px 0;
     }
 
@@ -315,7 +317,7 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
-  @include media(1280) {
+  @include media(1158) {
     grid-template-columns: repeat(4, 1fr);
   }
 
@@ -335,7 +337,7 @@
       max-height: 64px;
     }
 
-    @include media(1280) {
+    @include media(1158) {
       display: flex;
     }
   }
@@ -351,7 +353,7 @@
       text-align: left;
     }
 
-    @include media(1280) {
+    @include media(1158) {
       font-size: 1.25rem;
     }
   }
@@ -366,7 +368,7 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
-  @include media(1280) {
+  @include media(1158) {
     grid-template-columns: repeat(4, 1fr);
   }
 
@@ -512,7 +514,7 @@
       aspect-ratio: 356 / 300;
     }
 
-    @include media(1280) {
+    @include media(1158) {
       aspect-ratio: 360 / 300;
     }
   }

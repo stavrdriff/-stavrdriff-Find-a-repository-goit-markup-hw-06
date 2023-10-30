@@ -33,7 +33,7 @@
     }
 }
 
-@mixin media-minmax($min: 768, $max: 1280) {
+@mixin media-minmax($min: 768, $max: 1158) {
     @media (min-width: #{$min}px) and (max-width: #{$max}px) {
         @content;
     }
