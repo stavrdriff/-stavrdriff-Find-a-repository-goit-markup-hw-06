@@ -309,7 +309,7 @@
 .priorities {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  gap: 24px;
+  gap: 72px 24px;
 
   @include media(768) {
     grid-template-columns: repeat(2, 1fr);
@@ -520,7 +520,8 @@
   &__image {
     width: 100%;
     height: 100%;
-
+    object-fit: cover;
+    object-position: center;
   }
 
   &__overlay-text {

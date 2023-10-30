@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     bodyBlocked: 'is-blocked',
     modal: 'modal',
     modalTrigger: '[data-action="modalTrigger"]',
-    interactiveElements: 'input, button, a, textarea, iframe',
+    interactiveElements: 'input, button, a, textarea, iframe, select',
     mobileMenu: 'js-mobile-menu',
     mobileMenuTrigger: '[data-action="mobileMenuTrigger"]',
   }
