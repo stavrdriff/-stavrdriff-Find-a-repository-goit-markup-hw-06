@@ -5,7 +5,7 @@
   --primary-font-family: "Roboto", sans-serif;
   --body-background-color: #fff;
   --container-padding: 1rem;
-  --container-padding-tiny-tablet: 11.25rem;
+  --container-padding-tiny-tablet: 6.75rem;
   --container-padding-tiny-mobile: 1.75rem;
 }
 
@@ -109,14 +109,9 @@ h3 {
 .container--tiny {
   --ui-container-padding: var(--container-padding-tiny-mobile);
 }
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 1280px) {
   .container--tiny {
     --ui-container-padding: var(--container-padding-tiny-tablet);
-  }
-}
-@media (min-width: 1280px) {
-  .container--tiny {
-    --ui-container-padding: var(--container-padding);
   }
 }
 
@@ -596,7 +591,7 @@ h3 {
 }
 @media (min-width: 1280px) {
   .portfolio__image-container {
-    aspect-ratio: 356/300;
+    aspect-ratio: 360/300;
   }
 }
 .portfolio__image {

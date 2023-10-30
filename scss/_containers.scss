@@ -8,12 +8,8 @@
   &--tiny {
     --ui-container-padding: var(--container-padding-tiny-mobile);
 
-    @include media(768) {
+    @include media-minmax {
       --ui-container-padding: var(--container-padding-tiny-tablet);
-    }
-
-    @include media(1280) {
-      --ui-container-padding: var(--container-padding);
     }
   }
 }

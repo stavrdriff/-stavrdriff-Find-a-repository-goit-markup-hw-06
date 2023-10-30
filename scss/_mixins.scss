@@ -33,6 +33,12 @@
     }
 }
 
+@mixin media-minmax($min: 768, $max: 1280) {
+    @media (min-width: #{$min}px) and (max-width: #{$max}px) {
+        @content;
+    }
+}
+
 @mixin is-active {
     opacity: 1;
     visibility: visible;
