@@ -16,12 +16,40 @@
     .hero {
       --hero-background-image: url(../images/hero-image-1280.jpg);
 
-      @media (min-resolution: 150dpi) {
+      @media (min-width: 321px) and (min-resolution: 72dpi) {
+        --hero-background-image: url(../images/hero-image-768.jpg)
+      }
+
+      @media (min-width: 321px) and (min-resolution: 150dpi) {
+        --hero-background-image: url(../images/hero-image-768-1.5x.jpg)
+      }
+
+      @media (min-width: 321px) and (min-resolution: 300dpi) {
+        --hero-background-image: url(../images/hero-image-768-2x.jpg)
+      }
+
+      @media (min-width: 769px) and (min-resolution: 72dpi) {
+        --hero-background-image: url(../images/hero-image-1280.jpg)
+      }
+
+      @media (min-width: 769px) and (min-resolution: 150dpi) {
         --hero-background-image: url(../images/hero-image-1280-1.5x.jpg)
       }
 
-      @media (min-resolution: 300dpi) {
+      @media (min-width: 769px) and (min-resolution: 300dpi) {
         --hero-background-image: url(../images/hero-image-1280-2x.jpg)
+      }
+
+      @media (max-width: 320px) and (min-resolution: 72dpi) {
+        --hero-background-image: url(../images/hero-image-320.jpg)
+      }
+
+      @media (max-width: 320px) and (min-resolution: 150dpi) {
+        --hero-background-image: url(../images/hero-image-320-1.5x.jpg)
+      }
+
+      @media (max-width: 320px) and (min-resolution: 300dpi) {
+        --hero-background-image: url(../images/hero-image-320-2x.jpg)
       }
     }
   </style>
@@ -83,28 +111,28 @@
             <ul class="socials socials--header">
               <li class="socials__item">
                 <a href="#" class="socials__link" target="_blank" aria-label="DEFAULT_LABEL">
-                  <svg class="socials__icon" width="16" height="16">
+                  <svg class="socials__icon" width="24" height="24">
                     <use href="./images/icons.svg#instagram" /><!-- must be xlink -->
                   </svg>
                 </a>
               </li>
               <li class="socials__item">
                 <a href="#" class="socials__link" target="_blank" aria-label="DEFAULT_LABEL">
-                  <svg class="socials__icon" width="16" height="16">
+                  <svg class="socials__icon" width="24" height="24">
                     <use href="./images/icons.svg#twitter" /><!-- must be xlink -->
                   </svg>
                 </a>
               </li>
               <li class="socials__item">
                 <a href="#" class="socials__link" target="_blank" aria-label="DEFAULT_LABEL">
-                  <svg class="socials__icon" width="16" height="16">
+                  <svg class="socials__icon" width="24" height="24">
                     <use href="./images/icons.svg#facebook" /><!-- must be xlink -->
                   </svg>
                 </a>
               </li>
               <li class="socials__item">
                 <a href="#" class="socials__link" target="_blank" aria-label="DEFAULT_LABEL">
-                  <svg class="socials__icon" width="16" height="16">
+                  <svg class="socials__icon" width="24" height="24">
                     <use href="./images/icons.svg#linkedin" /><!-- must be xlink -->
                   </svg>
                 </a>
@@ -177,8 +205,8 @@
         <ul class="team">
           <li class="team__item">
             <picture class="team__image-container">
-              <source srcset="./images/img-1.webp" type="image/webp">
-              <source srcset="./images/img-1.jpg" type="image/jpg">
+              <source srcset="./images/img-1.webp, ./images/img-1-2x.webp 2x" type="image/webp">
+              <source srcset="./images/img-1.jpg, ./images/img-1-2x.jpg 2x" type="image/jpg">
               <img class="team__image" src="./images/img-1.jpg" width="264" height="260"
                 alt="Mark Guerrero - Product Designer">
             </picture>
@@ -219,8 +247,8 @@
           </li>
           <li class="team__item">
             <picture class="team__image-container">
-              <source srcset="./images/img-2.webp" type="image/webp">
-              <source srcset="./images/img-2.jpg" type="image/jpg">
+              <source srcset="./images/img-2.webp, ./images/img-2-2x.webp 2x" type="image/webp">
+              <source srcset="./images/img-2.jpg, ./images/img-2-2x.jpg 2x" type="image/jpg">
               <img class="team__image" src="./images/img-2.jpg" width="264" height="260"
                 alt="Tom Ford - Frontend Developer">
             </picture>
@@ -261,8 +289,8 @@
           </li>
           <li class="team__item">
             <picture class="team__image-container">
-              <source srcset="./images/img-3.webp" type="image/webp">
-              <source srcset="./images/img-3.jpg" type="image/jpg">
+              <source srcset="./images/img-3.webp, ./images/img-3-2x.webp 2x" type="image/webp">
+              <source srcset="./images/img-3.jpg, ./images/img-3-2x.jpg 2x" type="image/jpg">
               <img class="team__image" src="./images/img-3.jpg" width="264" height="260"
                 alt="Camila Garcia - Marketing">
             </picture>
@@ -303,8 +331,8 @@
           </li>
           <li class="team__item">
             <picture class="team__image-container">
-              <source srcset="./images/img-4.webp" type="image/webp">
-              <source srcset="./images/img-4.jpg" type="image/jpg">
+              <source srcset="./images/img-4.webp, ./images/img-4-2x.webp 2x" type="image/webp">
+              <source srcset="./images/img-4.jpg, ./images/img-4-2x.jpg 2x" type="image/jpg">
               <img class="team__image" src="./images/img-4.jpg" width="264" height="260"
                 alt="Daniel Wilson - UI Designer">
             </picture>
@@ -353,6 +381,8 @@
           <li class="portfolio__item">
             <div class="portfolio__overlay-wrapper">
               <picture class="portfolio__image-container">
+                <source srcset="./images/portfolio-1.webp, ./images/portfolio-1-2x.webp 2x" type="image/webp">
+                <source srcset="./images/portfolio-1.jpg, ./images/portfolio-1-2x.jpg 2x" type="image/jpg">
                 <img class="portfolio__image" src="./images/portfolio-1.jpg" width="360" height="300"
                   alt="Banking App - App">
               </picture>
@@ -367,6 +397,8 @@
           <li class="portfolio__item">
             <div class="portfolio__overlay-wrapper">
               <picture class="portfolio__image-container">
+                <source srcset="./images/portfolio-2.webp, ./images/portfolio-2-2x.webp 2x" type="image/webp">
+                <source srcset="./images/portfolio-2.jpg, ./images/portfolio-2-2x.jpg 2x" type="image/jpg">
                 <img class="portfolio__image" src="./images/portfolio-2.jpg" width="360" height="300"
                   alt="Cashless Payment - Marketing">
               </picture>
@@ -381,6 +413,8 @@
           <li class="portfolio__item">
             <div class="portfolio__overlay-wrapper">
               <picture class="portfolio__image-container">
+                <source srcset="./images/portfolio-3.webp, ./images/portfolio-3-2x.webp 2x" type="image/webp">
+                <source srcset="./images/portfolio-3.jpg, ./images/portfolio-3-2x.jpg 2x" type="image/jpg">
                 <img class="portfolio__image" src="./images/portfolio-3.jpg" width="360" height="300"
                   alt="Meditation App - App">
               </picture>
@@ -395,6 +429,8 @@
           <li class="portfolio__item">
             <div class="portfolio__overlay-wrapper">
               <picture class="portfolio__image-container">
+                <source srcset="./images/portfolio-4.webp, ./images/portfolio-4-2x.webp 2x" type="image/webp">
+                <source srcset="./images/portfolio-4.jpg, ./images/portfolio-4-2x.jpg 2x" type="image/jpg">
                 <img class="portfolio__image" src="./images/portfolio-4.jpg" width="360" height="300"
                   alt="Taxi Service - Marketing">
               </picture>
@@ -409,6 +445,8 @@
           <li class="portfolio__item">
             <div class="portfolio__overlay-wrapper">
               <picture class="portfolio__image-container">
+                <source srcset="./images/portfolio-5.webp, ./images/portfolio-5-2x.webp 2x" type="image/webp">
+                <source srcset="./images/portfolio-5.jpg, ./images/portfolio-5-2x.jpg 2x" type="image/jpg">
                 <img class="portfolio__image" src="./images/portfolio-5.jpg" width="360" height="300"
                   alt="Screen Illustrations - Design">
               </picture>
@@ -423,6 +461,8 @@
           <li class="portfolio__item">
             <div class="portfolio__overlay-wrapper">
               <picture class="portfolio__image-container">
+                <source srcset="./images/portfolio-6.webp, ./images/portfolio-6-2x.webp 2x" type="image/webp">
+                <source srcset="./images/portfolio-6.jpg, ./images/portfolio-6-2x.jpg 2x" type="image/jpg">
                 <img class="portfolio__image" src="./images/portfolio-6.jpg" width="360" height="300"
                   alt="Online Courses - Marketing">
               </picture>

@@ -1,7 +1,7 @@
 .section {
   padding: 96px 0;
 
-  @media (min-width: 768px) {
+  @include media(1158) {
     padding: 120px 0;
   }
 

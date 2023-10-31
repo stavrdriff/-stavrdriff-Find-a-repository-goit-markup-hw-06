@@ -14,9 +14,14 @@
   &__content {
     display: flex;
     align-items: baseline;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 4.5rem 1.5rem;
-    
+
+    @include media(768) {
+      justify-content: flex-start;
+    }
+
     @include media(1158) {
       gap: 0;
     }
