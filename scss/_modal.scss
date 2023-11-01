@@ -180,10 +180,12 @@
     line-height: 1.17;
     letter-spacing: 0.04em;
     cursor: pointer;
+    pointer-events: none;
   }
 
   &__link {
     color: var(--link-color);
+    pointer-events: auto;
   }
 
   &__checkbox-pseudo {
@@ -201,6 +203,8 @@
     border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 2px;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: auto;
+    cursor: pointer;
   }
 
   &__action {
