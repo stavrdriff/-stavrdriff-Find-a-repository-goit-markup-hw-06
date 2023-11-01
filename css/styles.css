@@ -679,6 +679,7 @@ h3 {
 @media (min-width: 768px) {
   .footer__text-wrapper {
     max-width: 16.5rem;
+    text-align: left;
   }
 }
 @media (min-width: 1158px) {
