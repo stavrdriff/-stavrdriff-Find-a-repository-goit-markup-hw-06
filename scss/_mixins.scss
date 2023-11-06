@@ -28,7 +28,7 @@
 }
 
 @mixin media($screen: 768) {
-    @media (min-width: #{$screen}px) {
+    @media screen and (min-width: #{$screen}px) {
         @content;
     }
 }
