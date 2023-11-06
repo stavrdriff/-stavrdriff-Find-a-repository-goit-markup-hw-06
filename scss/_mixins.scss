@@ -43,3 +43,19 @@
     opacity: 1;
     visibility: visible;
 }
+
+@mixin font-face(
+    $name, $file, 
+    $weight: normal, 
+    $style: normal, 
+    $display: swap,
+    $format: 'woff2'
+) {
+    @font-face {
+        font-weight: $weight;
+        font-family: "#{$name}";
+        font-style: $style;
+        font-display: $display;
+        src: url('../fonts/#{$name}/#{$file}.#{$format}') format($format);
+    }
+}
