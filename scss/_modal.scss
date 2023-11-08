@@ -152,7 +152,10 @@
     width: 100%;
     min-height: 120px;
     resize: none;
-    color: rgba(46, 47, 66, 0.4); 
+    
+    &::placeholder {
+      color: rgba(46, 47, 66, 0.4); 
+    }
   }
 
   &__checkbox {

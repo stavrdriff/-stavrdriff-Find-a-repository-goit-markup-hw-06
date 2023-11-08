@@ -896,6 +896,8 @@ h3 {
   width: 100%;
   min-height: 120px;
   resize: none;
+}
+.form-primary__textarea::placeholder {
   color: rgba(46, 47, 66, 0.4);
 }
 .form-primary__checkbox:checked + .form-primary__checkbox-label .form-primary__checkbox-pseudo {
