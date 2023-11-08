@@ -255,6 +255,10 @@
 
       @include media(768) {
         color: inherit;
+
+        @include event {
+          color: #4D5AE5;
+        }
       }
     }
   }

@@ -369,6 +369,9 @@ h3 {
   .address__link[href^="tel:"] {
     color: inherit;
   }
+  .address__link[href^="tel:"]:focus, .address__link[href^="tel:"]:hover {
+    color: #4D5AE5;
+  }
 }
 
 .hero {
